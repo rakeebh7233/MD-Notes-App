@@ -1,17 +1,17 @@
 export default function TopNav(props) {
-    const { hello, isViewer } = props
+    const { isViewer, handleToggleViewer } = props
     
     return (
         <>
             <div className="notes-btn">
-                <button className="card-button-primary-menu">
+                <button className="card-button-primary menu">
                     <i className="fa-solid fa-bars"></i>
                 </button>
                 <button>
                     <h6>Save</h6>
                     <i className="fa-solid fa-floppy-disk"></i>
                 </button>
-                <button className="card-button-secondary">
+                <button onClick={handleToggleViewer} className="card-button-secondary">
                     {isViewer ?
                         <>
                             <h6>Editor</h6>

@@ -110,6 +110,9 @@ footer a img {
     display: grid;
     grid-template-columns: repeat(1, minmax(0,1fr));
     flex: 1;
+    max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;
 }
 
 .nav,
@@ -226,6 +229,12 @@ footer a img {
     background: none;
 }
 
+article >div {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    flex: 1
+}
 
 /* UTILITY */
 .full-line {
@@ -247,7 +256,31 @@ footer a img {
     }
 }
 
-@media (min-width: 768px) {}
+@media (min-width: 768px) {
+
+    #notes {
+        grid-template-columns: repeat(3, minmax(0,1fr));
+        flex: 1
+    }
+
+    .nav {
+        position: sticky;
+        max-width: unset;
+    }
+
+    .hidden-nav {
+        display: flex !important;
+    }
+
+    .menu {
+        display: none !important;
+    }
+
+    .notes-container,
+    .mdx-container {
+        grid-column: span 2;
+    }
+}
 
 @media (min-width: 1024px) {
     #hero {
@@ -256,5 +289,15 @@ footer a img {
 
     .hero-img {
         grid-column: span 2 / span 2;
+    }
+
+    #notes {
+        grid-template-columns: repeat(4, minmax(0,1fr));
+    }
+
+    .notes-container,
+    .mdx-container {
+        grid-column: span 3;
+
     }
 }
