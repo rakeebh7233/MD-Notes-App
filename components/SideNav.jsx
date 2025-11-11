@@ -1,8 +1,10 @@
+import { useAuth } from "@/context/AuthContext"
 import { useEffect, useRef } from "react"
 
 export default function SideNav(props) {
     const notes = ['hello', 'world']
     const {showNav, setShowNav } = props
+    const {logout} = useAuth()
 
     const ref = useRef()
 
@@ -16,7 +18,7 @@ export default function SideNav(props) {
 
         document.addEventListener('mousedown', handleClickOutside)
         return () => {
-            document.removeEventListener('mousedown'. handleClickOutside)
+            document.removeEventListener('mousedown', handleClickOutside)
         }
 
     }, [ref])
@@ -47,7 +49,7 @@ export default function SideNav(props) {
                     })}
             </div>
             <div className="full-line"></div>
-            <button>
+            <button onClick={logout}>
                 <h6>Logout</h6>
                 <i className="fa-solid fa-arrow-right-from-bracket"></i>
             </button>

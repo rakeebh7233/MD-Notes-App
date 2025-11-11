@@ -1,6 +1,9 @@
 import Login from "@/components/Login";
+import { useAuth } from "@/context/AuthContext";
 
 export default function Home() {
+  
+
   return (
     <main id="hero">
       <div className="hero-img">
