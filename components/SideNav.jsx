@@ -1,9 +1,28 @@
+import { useEffect, useRef } from "react"
+
 export default function SideNav(props) {
     const notes = ['hello', 'world']
-    const showNav = false
+    const {showNav, setShowNav } = props
+
+    const ref = useRef()
+
+    useEffect(() => {
+        console.log(ref)
+        function handleClickOutside(event) {
+            if (ref.current && !ref.current.contains(event.target)) {
+                setShowNav(false)
+            }
+        }
+
+        document.addEventListener('mousedown', handleClickOutside)
+        return () => {
+            document.removeEventListener('mousedown'. handleClickOutside)
+        }
+
+    }, [ref])
 
     return (
-        <section className={"nav " + (showNav? '' : ' hidden-nav ')}>
+        <section ref={ref} className={"nav " + (showNav? '' : ' hidden-nav ')}>
             <h1 className="text-gradient">MDNOTES</h1>
             <h6>Easy Breezy Notes</h6>
             <div className="full-line"></div>   
