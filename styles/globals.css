@@ -117,7 +117,7 @@ footer a img {
 
 .nav,
 .notes-container,
-.mdx-container {
+.preview-container {
     padding: 2rem;
 }
 
@@ -213,7 +213,7 @@ footer a img {
 }
 
 .notes-container,
-.mdx-container {
+.preview-container {
     display: flex;
     flex-direction: column;
     gap: 1rem;
@@ -277,7 +277,7 @@ article >div {
     }
 
     .notes-container,
-    .mdx-container {
+    .preview-container {
         grid-column: span 2;
     }
 }
@@ -296,7 +296,7 @@ article >div {
     }
 
     .notes-container,
-    .mdx-container {
+    .preview-container {
         grid-column: span 3;
 
     }

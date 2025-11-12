@@ -1,11 +1,11 @@
 import Markdown from "markdown-to-jsx";
 import TopNav from "./TopNav";
 
-export default function MDX(props) {
+export default function Preview(props) {
     const { text } = props
 
     return (
-        <section className="mdx-container">
+        <section className="preview-container">
             <TopNav {...props} />
             <article>
                 <Markdown>

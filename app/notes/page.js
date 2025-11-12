@@ -1,6 +1,6 @@
 'use client'
 import Editor from "@/components/Editor";
-import MDX from "@/components/MDX";
+import Preview from "@/components/Preview";
 import SideNav from "@/components/SideNav";
 import { useAuth } from "@/context/AuthContext";
 import { db } from "@/firebase";
@@ -125,7 +125,7 @@ export default function NotesPage() {
         />)
       }
       {isViewer &&
-        (<MDX
+        (<Preview
           text={note.content}
           isViewer={isViewer}
           handleToggleViewer={handleToggleViewer}

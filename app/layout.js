@@ -1,5 +1,5 @@
-import "./globals.css";
-import "./fanta.css";
+import "../styles/globals.css";
+import "../styles/fanta.css";
 import Head from './head'
 import AuthProvider from "@/context/AuthContext";
 

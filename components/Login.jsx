@@ -40,7 +40,7 @@ export default function Login() {
             <div className="login-container">
                 <h1 className="text-gradient">MDNOTES</h1>
                 <h2>Organized note taking made easy</h2>
-                <p>Build your very own archive of easily navifated and indexed information and notes</p>
+                <p>Build your very own archive of easily navigated and indexed information and notes</p>
                 <div className="full-line"></div>
                 <h6>{isRegister? "Create an account" : "Log in"}</h6>
                 <div>
