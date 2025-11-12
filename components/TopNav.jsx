@@ -1,5 +1,5 @@
 export default function TopNav(props) {
-    const { isViewer, handleToggleViewer, handleToggleMenu, handleSavingNote, savingNote } = props
+    const { isViewer, handleToggleViewer, handleToggleMenu, handleSaveNote, savingNote } = props
     
     return (
         <>
@@ -7,8 +7,8 @@ export default function TopNav(props) {
                 <button onClick={handleToggleMenu} className="card-button-primary menu">
                     <i className="fa-solid fa-bars"></i>
                 </button>
-                <button disabled={savingNote}>
-                    <h6>Save</h6>
+                <button onClick={handleSaveNote} disabled={savingNote}>
+                    <h6>{savingNote? "Saving...":"Save"}</h6>
                     <i className="fa-solid fa-floppy-disk"></i>
                 </button>
                 <button onClick={handleToggleViewer} className="card-button-secondary">
