@@ -20,6 +20,7 @@ Each user can securely log in, create personal notes, and view or edit them acro
 - ☁️ **Firestore database** for secure, per-user note storage
 - ⚡ **Next.js App Router** structure with client/server components
 - 💾 **Auto-save support** for note content
+- 🕰️**Password Reset** functionality through email
 - 🧭 Clean, responsive UI for all screen sizes (mobile supported)
 
 ---

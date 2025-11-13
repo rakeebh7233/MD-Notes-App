@@ -1,7 +1,7 @@
 'use client'
 
 import { auth } from "@/firebase"
-import { createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, signOut } from "firebase/auth"
+import { createUserWithEmailAndPassword, onAuthStateChanged, sendPasswordResetEmail, signInWithEmailAndPassword, signOut } from "firebase/auth"
 import { useRouter } from "next/navigation"
 import { createContext, useContext, useEffect, useState } from "react"
 
@@ -27,6 +27,10 @@ export default function AuthProvider(props) {
     function logout() {
         setCurrentUser(null)
         return signOut(auth)
+    }
+
+    function resetPassword(email) {
+        return sendPasswordResetEmail(auth, email);
     }
 
 
@@ -55,7 +59,8 @@ export default function AuthProvider(props) {
         isLoadingUser,
         signup,
         login,
-        logout
+        logout,
+        resetPassword
     }
 
     return (
