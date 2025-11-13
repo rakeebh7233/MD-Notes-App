@@ -5,9 +5,7 @@ Each user can securely log in, create personal notes, and view or edit them acro
 
 ---
 
-## 🔗 Demo
-[🔗 Netlify Demo Link](www.google.com)
-<br />
+## [🔗 Netlify Demo Link](https://easymarkdownnotes.netlify.app/)
 <img src="./public/home.png" alt="home page" width="450px" height="300px"/>
 <img src="./public/notes-page.png" alt="notes page" width="450px" height="300px"/>
 
